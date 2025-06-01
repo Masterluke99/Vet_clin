@@ -1,19 +1,20 @@
 # Vet_Clin - Sistema de Gestão para Clínicas Veterinárias
-# Acesse a versão atual do projeto em: https://github.com/Masterluke99/Vet_clin
 
 **Versão atual: 1.0.0**
 
 Um sistema completo de gestão para clínicas veterinárias desenvolvido em React com TypeScript e integração com Firebase.
+
+Acesse o repositório oficial em: [https://github.com/Masterluke99/Vet_clin](https://github.com/Masterluke99/Vet_clin)
 
 ## Sobre o Projeto
 
 Vet_Clin é uma aplicação web que permite gerenciar todos os aspectos de uma clínica veterinária, incluindo:
 
 - Cadastro de animais e seus tutores
-- Agendamento e registro de atendimentos
+- Agendamento e registro de atendimentos com seleção múltipla de serviços
 - Histórico médico dos pacientes
 - Controle de produtos e estoque
-- Registro de vendas
+- Registro de vendas com cálculo automático de valores
 - Cadastro de serviços
 - Gestão de funcionários
 
@@ -25,7 +26,7 @@ Abaixo estão capturas de tela das principais funcionalidades do sistema:
 
 ### Painel de Gestão
 
-![Painel de Gestão](screenshots/painel%20de%20gestão.png)
+![Painel de Gestão](./screenshots/painel%20de%20gestão.png)
 
 ### Cadastro de Animais
 
@@ -42,6 +43,15 @@ Abaixo estão capturas de tela das principais funcionalidades do sistema:
 ### Atendimentos
 
 ![Atendimentos](./screenshots/atendimentos.png)
+
+## Melhorias Recentes
+
+Na versão 1.0.0, foram implementadas as seguintes melhorias:
+
+- **Seleção múltipla de serviços**: Agora é possível selecionar vários serviços em um único atendimento, facilitando o registro de procedimentos complexos.
+- **Cálculo automático de valores**: O sistema calcula automaticamente o valor total com base nos serviços selecionados.
+- **Melhor tratamento de valores numéricos**: Todos os campos numéricos e valores monetários são tratados com maior precisão.
+- **Interface mais intuitiva**: Checkboxes para seleção de múltiplos serviços e melhor visualização dos itens selecionados.
 
 ## Configuração do Banco de Dados (Firebase)
 
@@ -85,38 +95,82 @@ npm install firebase
 
 ## Tecnologias Utilizadas
 
-- React
-- TypeScript
-- Firebase (Firestore)
-- Chakra UI
+- **Frontend**: 
+  - React 18.2.0
+  - TypeScript 4.9.5
+  - Chakra UI 2.8.0 (componentes e estilização)
+  - Material-UI 5.14.18 (componentes adicionais)
+  - React Router Dom 6.18.0 (navegação)
+  
+- **Backend e Banco de Dados**:
+  - Firebase 10.5.2
+  - Firestore (banco de dados NoSQL)
+  - Firebase Authentication (autenticação de usuários)
+  
+- **Ferramentas de Desenvolvimento**:
+  - Create React App
+  - ESLint (linting de código)
+  - Git e GitHub (controle de versão)
+
+## Instalação e Execução
+
+Para começar a usar o Vet_Clin em seu ambiente de desenvolvimento, siga estas etapas:
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/Masterluke99/Vet_clin.git
+   cd Vet_clin
+   ```
+
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure o Firebase**:
+   - Crie um projeto no Firebase conforme descrito na seção "Configuração do Banco de Dados"
+   - Adicione suas credenciais no arquivo `src/firebaseConfig.ts`
+
+4. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm start
+   ```
+
+5. **Acesse a aplicação**:
+   Abra seu navegador em [http://localhost:3000](http://localhost:3000)
 
 ## Comandos Disponíveis
 
-Na pasta do projeto execute o comando:
+Na pasta do projeto você pode executar:
 
 ### `npm start`
 
-O app será executado no modo desenvolvedor.  
+Executa o aplicativo no modo de desenvolvimento.\
 Abra [http://localhost:3000](http://localhost:3000) no navegador.
-
-A página será recarregada automaticamente quando você fizer alterações no código.
 
 ### `npm test`
 
-Inicia o executor de testes no modo interativo de observação.  
-Veja mais sobre [execução de testes](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
+Inicia o executor de testes no modo de observação interativa.
 
 ### `npm run build`
 
-Compila o aplicativo para produção na pasta `build`.  
-Empacota corretamente o React no modo de produção e otimiza a compilação para o melhor desempenho.
+Compila o aplicativo para produção na pasta `build`.\
+O aplicativo estará otimizado para melhor desempenho.
 
-A compilação é minificada e os nomes dos arquivos incluem hashes.  
-Seu aplicativo está pronto para ser implantado!
+## Como Contribuir
 
-## Saiba Mais
+Contribuições são sempre bem-vindas! Se você quiser contribuir com este projeto:
 
-Você pode aprender mais na [documentação do Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Faça um fork do repositório
+2. Crie uma branch para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request
 
-Para aprender React, consulte a [documentação do React](https://reactjs.org/).
+## Licença
 
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+---
+
+Desenvolvido por [Masterluke99](https://github.com/Masterluke99) - 2025
