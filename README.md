@@ -1,5 +1,5 @@
 # Vet_Clin - Sistema de Gestão para Clínicas Veterinárias
-# Acesse a versão atual do projeto em: https://github.com/Masterluke99/Vet_clin/tree/master
+# Acesse a versão atual do projeto em: https://github.com/Masterluke99/Vet_clin
 
 **Versão atual: 1.0.0**
 
