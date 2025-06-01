@@ -25,7 +25,7 @@ Abaixo estão capturas de tela das principais funcionalidades do sistema:
 
 ### Painel de Gestão
 
-![Painel de Gestão](./screenshots/painel%20de%20gestão.png)
+![Painel de Gestão](screenshots/painel%20de%20gestão.png)
 
 ### Cadastro de Animais
 
