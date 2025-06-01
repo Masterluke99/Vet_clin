@@ -26,23 +26,23 @@ Abaixo estão capturas de tela das principais funcionalidades do sistema:
 
 ### Painel de Gestão
 
-![Painel de Gestão](./screenshots/painel%20de%20gestão.png)
+![Painel de Gestão](https://raw.githubusercontent.com/Masterluke99/Vet_clin/master/screenshots/painel%20de%20gestão.png)
 
 ### Cadastro de Animais
 
-![Cadastro de Animais](./screenshots/cadastro%20de%20animais.png)
+![Cadastro de Animais](https://raw.githubusercontent.com/Masterluke99/Vet_clin/master/screenshots/cadastro%20de%20animais.png)
 
 ### Cadastro de Tutores
 
-![Cadastro de Tutores](./screenshots/cadastro%20de%20tutores.png)
+![Cadastro de Tutores](https://raw.githubusercontent.com/Masterluke99/Vet_clin/master/screenshots/cadastro%20de%20tutores.png)
 
 ### Registro de Serviços
 
-![Registro de Serviços](./screenshots/registro%20de%20serviços.png)
+![Registro de Serviços](https://raw.githubusercontent.com/Masterluke99/Vet_clin/master/screenshots/registro%20de%20serviços.png)
 
 ### Atendimentos
 
-![Atendimentos](./screenshots/atendimentos.png)
+![Atendimentos](https://raw.githubusercontent.com/Masterluke99/Vet_clin/master/screenshots/atendimentos.png)
 
 ## Melhorias Recentes
 
