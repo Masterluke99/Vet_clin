@@ -1,5 +1,5 @@
 # Vet_Clin - Sistema de Gestão para Clínicas Veterinárias
-# Acesse a versão atual do projeto em: https://github.com/Masterluke99/vet_clin
+# Acesse a versão atual do projeto em: https://github.com/Masterluke99/Vet_clin/tree/master
 
 **Versão atual: 1.0.0**
 
@@ -25,23 +25,23 @@ Abaixo estão capturas de tela das principais funcionalidades do sistema:
 
 ### Painel de Gestão
 
-![Painel de Gestão](screenshots/painel%20de%20gestão.png)
+![Painel de Gestão](./screenshots/painel%20de%20gestão.png)
 
 ### Cadastro de Animais
 
-![Cadastro de Animais](screenshots/cadastro%20de%20animais.png)
+![Cadastro de Animais](./screenshots/cadastro%20de%20animais.png)
 
 ### Cadastro de Tutores
 
-![Cadastro de Tutores](screenshots/cadastro%20de%20tutores.png)
+![Cadastro de Tutores](./screenshots/cadastro%20de%20tutores.png)
 
 ### Registro de Serviços
 
-![Registro de Serviços](screenshots/registro%20de%20serviços.png)
+![Registro de Serviços](./screenshots/registro%20de%20serviços.png)
 
 ### Atendimentos
 
-![Atendimentos](screenshots/atendimentos.png)
+![Atendimentos](./screenshots/atendimentos.png)
 
 ## Configuração do Banco de Dados (Firebase)
 
