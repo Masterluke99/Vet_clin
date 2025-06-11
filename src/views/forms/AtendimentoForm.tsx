@@ -17,7 +17,7 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper,
   Checkbox,
-  CheckboxGroup,
+  // CheckboxGroup, // Não utilizado
   Stack,
   Text
 } from '@chakra-ui/react';

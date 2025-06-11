@@ -23,13 +23,11 @@ export const mainListItems = (
       <Link to="/servicos" style={{display: 'block', padding: '10px', color: '#333', textDecoration: 'none'}}>
         Serviços
       </Link>
-      
-      <Link to="/produtos" style={{display: 'block', padding: '10px', color: '#333', textDecoration: 'none'}}>
+        <Link to="/produtos" style={{display: 'block', padding: '10px', color: '#333', textDecoration: 'none'}}>
         Produtos
       </Link>
-      
-      <Link to="/vendas" style={{display: 'block', padding: '10px', color: '#333', textDecoration: 'none'}}>
-        Vendas
+        <Link to="/pdv" style={{display: 'block', padding: '10px', color: '#333', textDecoration: 'none', fontWeight: 'bold', backgroundColor: '#f2f9f5'}}>
+        PDV - Ponto de Venda
       </Link>
     </div>
   </React.Fragment>

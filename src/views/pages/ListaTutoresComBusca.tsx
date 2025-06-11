@@ -53,8 +53,8 @@ const ListaTutoresComBusca: React.FC<Props> = ({ onSelect, onAddNew }) => {
   
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [editingTutor, setEditingTutor] = useState<Tutor | undefined>(undefined);
-    // Importação dos estilos centralizados
-  const { bgColor, headerBgColor, buttonColorScheme, borderColor, successColor, errorColor } = TutorStyles;
+  // Importação dos estilos centralizados
+  const { bgColor, headerBgColor, buttonColorScheme, borderColor } = TutorStyles;
 
   // Filtragem local de tutores (alternativa à busca no servidor)
   const tutoresFiltrados = busca

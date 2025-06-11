@@ -189,19 +189,17 @@ const Dashboard: React.FC<DashboardProps> = ({ children, title }) => {    const 
                   Produtos
                 </Flex>
               </RouterLink>
-            </Box>
-            <Box 
+            </Box>            <Box 
               mb={3} 
               p={2} 
               borderRadius="md" 
-              bg={currentPath === '/vendas' ? activeBgColor : 'transparent'}
+              bg={currentPath === '/pdv' ? activeBgColor : 'transparent'}
               _hover={{ bg: "green.200", shadow: "md" }}
               transition="all 0.2s"
-            >
-              <RouterLink to="/vendas" style={{ color: linkColor }}>
+            >              <RouterLink to="/pdv" style={{ color: linkColor }}>
                 <Flex align="center">
-                  <Image src={vendasIcon} alt="Vendas" boxSize="30px" mr={2} />
-                  Vendas
+                  <Image src={vendasIcon} alt="PDV" boxSize="30px" mr={2} />
+                  PDV - Ponto de Venda
                 </Flex>
               </RouterLink>
             </Box>          </Stack>

@@ -28,18 +28,3 @@ export interface Venda {
   createdAt?: Date;
   updatedAt?: Date;
 }
-
-export interface VendaFormValues {
-  itens: {
-    produtoId: string;
-    quantidade: number;
-    precoUnitario: number;
-  }[];
-  tutorId?: string;
-  funcionarioId?: string;
-  data: Date | string;
-  desconto?: number;
-  formaPagamento: 'dinheiro' | 'cartao_credito' | 'cartao_debito' | 'pix' | 'transferencia';
-  status: 'concluida' | 'cancelada' | 'pendente';
-  observacoes?: string;
-}

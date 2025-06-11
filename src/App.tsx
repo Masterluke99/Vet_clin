@@ -9,8 +9,8 @@ import ListaProdutosComBusca from './views/pages/ListaProdutosComBusca';
 import ListaServicosComBusca from './views/pages/ListaServicosComBusca';
 import ListaFuncionariosComBusca from './views/pages/ListaFuncionariosComBusca';
 import ListaAtendimentosComBusca from './views/pages/ListaAtendimentosComBusca';
-import ListaVendasComBusca from './views/pages/ListaVendasComBusca';
 import HistoricoAtendimentosView from './views/pages/HistoricoAtendimentosView';
+import PdvPage from './views/pages/PdvPage';
 
 // Dashboard components
 import Dashboard from './components/dashboard/Dashboard';
@@ -100,10 +100,9 @@ function App() {
           <Route path="/animais" element={<Dashboard title="Lista de Animais"><ListaAnimaisComBusca /></Dashboard>} />
           <Route path="/tutores" element={<Dashboard title="Lista de Tutores"><ListaTutoresComBusca /></Dashboard>} />
           <Route path="/servicos" element={<Dashboard title="Lista de Serviços"><ListaServicosComBusca /></Dashboard>} />
-          <Route path="/produtos" element={<Dashboard title="Lista de Produtos"><ListaProdutosComBusca /></Dashboard>} />
-          <Route path="/funcionarios" element={<Dashboard title="Lista de Funcionários"><ListaFuncionariosComBusca /></Dashboard>} />
+          <Route path="/produtos" element={<Dashboard title="Lista de Produtos"><ListaProdutosComBusca /></Dashboard>} />          <Route path="/funcionarios" element={<Dashboard title="Lista de Funcionários"><ListaFuncionariosComBusca /></Dashboard>} />
           <Route path="/atendimentos" element={<Dashboard title="Lista de Atendimentos"><ListaAtendimentosComBusca /></Dashboard>} />
-          <Route path="/vendas" element={<Dashboard title="Lista de Vendas"><ListaVendasComBusca /></Dashboard>} />
+          <Route path="/pdv" element={<Dashboard title="PDV - Ponto de Venda"><PdvPage /></Dashboard>} />
           
           {/* Rota para o componente de relatório */}
           <Route path="/historico-atendimentos" element={<Dashboard title="Histórico de Atendimentos"><HistoricoAtendimentosView /></Dashboard>} />

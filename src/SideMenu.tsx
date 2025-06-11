@@ -32,8 +32,7 @@ const menuStyle: React.CSSProperties = {
   boxShadow: '0px 0px 20px rgba(0,0,0,0.1)',
 };
 
-const SideMenu: React.FC = () => {
-  const links = [
+const SideMenu: React.FC = () => {  const links = [
     { to: '/', label: 'Cadastro de Animal', icon: petIcon },
     { to: '/animais', label: 'Lista de Animais', icon: petIcon },
     { to: '/servicos', label: 'Cadastro de Serviço', icon: servicosIcon },
@@ -41,7 +40,7 @@ const SideMenu: React.FC = () => {
     { to: '/historico', label: 'Histórico de Atendimentos', icon: historicoIcon },
     { to: '/funcionarios', label: 'Cadastro de Funcionário', icon: negocioIcon },
     { to: '/produtos', label: 'Lista de Produtos', icon: produtosIcon },
-    { to: '/vendas', label: 'Cadastro de Venda', icon: vendasIcon },
+    { to: '/pdv', label: 'PDV - Ponto de Venda', icon: vendasIcon },
     { to: '/tutores', label: 'Cadastro de Tutor/Cliente', icon: tutorIcon },
   ];
   

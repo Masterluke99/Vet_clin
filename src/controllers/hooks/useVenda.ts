@@ -60,12 +60,30 @@ export const useVenda = () => {
       setLoading(false);
     }
   }, [toast]);
-
   // Adicionar nova venda
   const addVenda = async (vendaData: Omit<Venda, 'id'>) => {
     setLoading(true);
     try {
-      await VendaService.addVenda(vendaData);
+      // Validar dados antes de enviar
+      if (!vendaData.itens || vendaData.itens.length === 0) {
+        throw new Error('A venda precisa conter pelo menos um item');
+      }
+
+      // Verificar e normalizar valores numéricos
+      const dadosValidados = {
+        ...vendaData,
+        valorTotal: Number(vendaData.valorTotal),
+        desconto: Number(vendaData.desconto || 0),
+        valorFinal: Number(vendaData.valorFinal),
+      };
+
+      // Enviar para o serviço
+      const resultado = await VendaService.addVenda(dadosValidados);
+      
+      if (!resultado) {
+        throw new Error('Falha ao registrar venda no serviço');
+      }
+      
       toast({
         title: 'Venda registrada',
         description: 'A venda foi registrada com sucesso',
@@ -74,12 +92,14 @@ export const useVenda = () => {
         isClosable: true,
         position: 'top',
       });
+      
       await fetchData(); // Recarregar dados
       return true;
-    } catch (error) {
+    } catch (error: any) {
+      console.error("Erro no hook addVenda:", error);
       toast({
         title: 'Erro ao registrar',
-        description: 'Ocorreu um erro ao registrar a venda',
+        description: error?.message || 'Ocorreu um erro ao registrar a venda',
         status: 'error',
         duration: 3000,
         isClosable: true,
@@ -90,102 +110,13 @@ export const useVenda = () => {
       setLoading(false);
     }
   };
-
-  // Atualizar venda existente
-  const updateVenda = async (id: string, vendaData: Partial<Venda>) => {
-    setLoading(true);
-    try {
-      await VendaService.updateVenda(id, vendaData);
-      toast({
-        title: 'Venda atualizada',
-        description: 'A venda foi atualizada com sucesso',
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-        position: 'top',
-      });
-      await fetchData(); // Recarregar dados
-      return true;
-    } catch (error) {
-      toast({
-        title: 'Erro ao atualizar',
-        description: 'Ocorreu um erro ao atualizar a venda',
-        status: 'error',
-        duration: 3000,
-        isClosable: true,
-        position: 'top',
-      });
-      return false;
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Excluir venda
-  const deleteVenda = async (id: string) => {
-    setLoading(true);
-    try {
-      await VendaService.deleteVenda(id);
-      toast({
-        title: 'Venda excluída',
-        description: 'A venda foi excluída com sucesso',
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-        position: 'top',
-      });
-      await fetchData(); // Recarregar dados
-      return true;
-    } catch (error) {
-      toast({
-        title: 'Erro ao excluir',
-        description: 'Ocorreu um erro ao excluir a venda',
-        status: 'error',
-        duration: 3000,
-        isClosable: true,
-        position: 'top',
-      });
-      return false;
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Buscar vendas por tutor
-  const getVendasPorTutor = async (tutorId: string) => {
-    setLoading(true);
-    try {
-      const vendasTutor = await VendaService.getVendasPorTutor(tutorId);
-      
-      // Carregar dados relacionados
-      const vendasCompletas = await VendaService.loadRelatedData(
-        vendasTutor, 
-        produtos, 
-        tutores, 
-        funcionarios
-      );
-      
-      return vendasCompletas;
-    } catch (error) {
-      toast({
-        title: 'Erro ao buscar',
-        description: 'Ocorreu um erro ao buscar as vendas',
-        status: 'error',
-        duration: 3000,
-        isClosable: true,
-        position: 'top',
-      });
-      return [];
-    } finally {
-      setLoading(false);
-    }
-  };
+  // Função simplificada apenas para o PDV
+  // Não precisamos mais de updateVenda, deleteVenda, getVendasPorTutor
 
   // Carregar dados na inicialização
   useEffect(() => {
     fetchData();
   }, [fetchData]);
-
   return {
     vendas,
     produtos,
@@ -194,9 +125,6 @@ export const useVenda = () => {
     loading,
     error,
     addVenda,
-    updateVenda,
-    deleteVenda,
-    getVendasPorTutor,
     reloadData: fetchData
   };
 };
